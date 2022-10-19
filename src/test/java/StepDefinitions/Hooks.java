@@ -14,12 +14,11 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Hooks {
-
-    @Before
-    public void before()
-    {
-        System.out.println("Senaryo başladı");
-    }
+    /* - Test senaryolarının çalışmasından sonra driver'ı kapatması için
+    oluşturulan metod.
+       - @After annotation' ı burada bize bunu sağlıyor. Her senaryo çalısmasını bitirdiğinde
+       driver ı yani browser ı kapatır.
+    */
 
     @After
     public void after(Scenario scenario)
